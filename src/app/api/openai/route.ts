@@ -12,8 +12,6 @@ export const runtime = "edge";
 export async function POST(request: Request) {
   const { prompt } = await request.json();
 
-  console.log("Hello prompt", prompt);
-
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     stream: true,
